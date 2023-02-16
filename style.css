@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-body: hsla(0, 0%, 100%, 1);
+    --fs-body: 1.6rem;
+    --ff-body: 'Roboto';
+
+    --bg-sounds: hsla(240, 9%, 89%, 1);
+    --bg-hoverSounds: hsla(194, 97%, 31%, 1);
+    --fc-hoverSounds: hsla(0, 0%, 100%, 1);
+
+    --fc-timer: hsla(240, 6%, 21%, 1);
+    --fs-timer: 12.6rem;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+}
+
+main {
+    width: clamp(50rem, 50rem + 50vw, 82.1rem);
+
+    display: flex;
+    gap: 19.2rem;
+}
+
+main p {
+    font-weight: 500;
+    font-size: var(--fs-timer);
+    line-height: 14.8rem;
+
+    color: var(--fc-timer);
+
+    margin-bottom: 1.7rem;
+
+    display: flex;
+    gap: .5rem;
+}
+
+.screen1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 4rem;
+
+    cursor: pointer;
+}
+
+.play,
+.pause,
+.more-five-minutes,
+.minus-five-minutes {
+    transition: all 200ms;
+}
+
+.play:hover,
+.pause:hover,
+.more-five-minuts:hover,
+.minus-five-minuts:hover {
+    transform: scale(1.1);
+}
+
+/* screen 2 */
+.screen2 {
+    display: grid;
+    grid-template-areas: "a b";
+    gap: 3.2rem;
+}
+
+.florest,
+.rain,
+.coffe,
+.fireplace {
+    background: var(--bg-sounds);
+    border-radius: 2.4rem;
+    width: 13.8rem;
+    height: 15.2rem;
+
+    padding: 4.8rem 4.7rem;
+
+    cursor: pointer;
+
+    transition: all 300ms;
+}
+
+.florest:hover,
+.rain:hover,
+.coffe:hover,
+.fireplace:hover {
+    color: var(--fc-hoverSounds);
+
+    background: var(--bg-hoverSounds);
+}
